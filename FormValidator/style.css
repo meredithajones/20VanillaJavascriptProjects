@@ -82,3 +82,16 @@ h2 {
 .form-control.error small {
     visibility: visible;
 }
+
+.form button {
+    cursor: pointer;
+    color: #F3EFCC;
+    background-color: #32502E;
+    font-family: inherit;
+    border: 2px solid #32502E;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
