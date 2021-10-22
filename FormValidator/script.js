@@ -13,8 +13,14 @@ function showError(input, message) {
     
     //Creating a new element for the 'small' element
     const small = formControl.querySelector('small');
+    small.innerText = message;
 }
 
+// Show success outline
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
 
 // Event Listeners
 form.addEventListener('submit', function(e){
