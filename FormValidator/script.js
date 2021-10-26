@@ -32,9 +32,17 @@ function isValidEmail(email){
 function checkRequired(inputArr) {
     inputArr.forEach(function(input) {
        if(input.value.trim() === '') {
-           showError(input, 'Entry is required');
+        //Displaying input id in error message using template literal
+           showError(input, `${getFieldName(input)} is required`);
+       } else {
+           showSuccess(input);
        }
     });
+}
+
+//Get Field Name
+function getFieldName(input) {
+    return input.id;
 }
 
 // Event Listeners
