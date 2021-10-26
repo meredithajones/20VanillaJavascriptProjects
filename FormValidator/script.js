@@ -42,7 +42,8 @@ function checkRequired(inputArr) {
 
 //Get Field Name
 function getFieldName(input) {
-    return input.id;
+    // Using charAt(0) to capitalize first letter and .slice to concatonate the rest of word
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // Event Listeners
