@@ -40,6 +40,14 @@ function checkRequired(inputArr) {
     });
 }
 
+//Check input length 
+function checkLength(input, min, max) {
+    if(input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min}
+        characters` );
+    }
+}
+
 //Get Field Name
 function getFieldName(input) {
     // Using charAt(0) to capitalize first letter and .slice to concatonate the rest of word
@@ -52,5 +60,7 @@ form.addEventListener('submit', function(e){
 
     //Calling checkRequired on array of inputs
 checkRequired([username, email, password, password2]);
+checkLength(username, 3, 15);
+checkLength(password, 6, 25);
 
 });
