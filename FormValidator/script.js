@@ -29,14 +29,17 @@ function isValidEmail(email){
 }
 
 //Check required fields
-function checkRequired() {
-    
+function checkRequired(inputArr) {
+    inputArr.forEach(function() {
+        
+    });
 }
 
 // Event Listeners
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-checkRequired();
+    //Calling checkRequired on array of inputs
+checkRequired([username, email, password, password2]);
 
 });
