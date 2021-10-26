@@ -30,8 +30,10 @@ function isValidEmail(email){
 
 //Check required fields
 function checkRequired(inputArr) {
-    inputArr.forEach(function() {
-        
+    inputArr.forEach(function(input) {
+       if(input.value.trim() === '') {
+           showError(input, 'Entry is required');
+       }
     });
 }
 
