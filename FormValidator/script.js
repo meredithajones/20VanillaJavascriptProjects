@@ -57,6 +57,13 @@ function checkLength(input, min, max) {
     }
 }
 
+//Check passwords match
+function checkPasswordsMatch(input1, input2) {
+    if(input1.value !== input2.value) {
+        showError(input2);
+    }
+}
+
 //Get Field Name
 function getFieldName(input) {
     // Using charAt(0) to capitalize first letter and .slice to concatonate the rest of word
